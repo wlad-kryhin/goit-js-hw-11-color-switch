@@ -14,7 +14,7 @@ let id = 0;
   const start = document.querySelector('[data-action="start"]')
  start.addEventListener('click', () => 
  id = setInterval(() => {
-    document.body.style.background = colors[randomIntegerFromInterval(0,colors.length)]
+    document.body.style.background = colors[randomIntegerFromInterval(0,[colors.length -1])]
     start.setAttribute('disabled', true);
     stop.removeAttribute('disabled');
 }, 1000)
